@@ -8,13 +8,12 @@
     tools:context="com.google.android.gms.samples.vision.barcodereader.MainActivity">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/barcode_header"
         android:id="@+id/status_message"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome To Smart DTC"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -36,16 +35,6 @@
         android:id="@+id/read_barcode"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/use_flash"
-        android:id="@+id/use_flash"
-        android:checked="false"
-        android:layout_above="@+id/read_barcode"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="51dp" />
 
 
 </RelativeLayout>

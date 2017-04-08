@@ -53,11 +53,6 @@ import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.IOException;
 
-/**
- * Activity for the multi-tracker app.  This app detects barcodes and displays the value with the
- * rear facing camera. During detection overlay graphics are drawn to indicate the position,
- * size, and ID of each barcode.
- */
 public final class BarcodeCaptureActivity extends AppCompatActivity implements BarcodeGraphicTracker.BarcodeDetectorListener {
     private static final String TAG = "Barcode-reader";
 
@@ -70,7 +65,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
     // constants used to pass extra data in the intent
     public static final String AutoFocus = "AutoFocus";
     public static final String UseFlash = "UseFlash";
-    public static final String AutoCapture = "AutoCapture";
+
     public static final String BarcodeObject = "Barcode";
 
     private CameraSource mCameraSource;
@@ -81,9 +76,6 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
     private ScaleGestureDetector scaleGestureDetector;
     private GestureDetector gestureDetector;
 
-    /**
-     * Initializes the UI and creates the detector pipeline.
-     */
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -94,9 +86,7 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
 
         // read parameters from the intent used to launch the activity.
         boolean autoFocus = true;
-        boolean useFlash = getIntent().getBooleanExtra(UseFlash, false);
-        boolean autoCapture = getIntent().getBooleanExtra(AutoCapture, false);
-
+        boolean useFlash = getIntent().getBooleanExtra(UseFlash,false);
 
             BarcodeGraphicTracker.mBarcodeDetectorListener = this;
 
@@ -117,11 +107,6 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
                 .show();
     }
 
-    /**
-     * Handles the requesting of the camera permission.  This includes
-     * showing a "Snackbar" message of why the permission is needed then
-     * sending the request.
-     */
     private void requestCameraPermission() {
         Log.w(TAG, "Camera permission is not granted. Requesting permission");
 
@@ -158,14 +143,6 @@ public final class BarcodeCaptureActivity extends AppCompatActivity implements B
         return b || c || super.onTouchEvent(e);
     }
 
-    /**
-     * Creates and starts the camera.  Note that this uses a higher resolution in comparison
-     * to other detection examples to enable the barcode detector to detect small barcodes
-     * at long distances.
-     *
-     * Suppressing InlinedApi since there is a check that the minimum version is met before using
-     * the constant.
-     */
     @SuppressLint("InlinedApi")
     private void createCameraSource(boolean autoFocus, boolean useFlash) {
         Context context = getApplicationContext();

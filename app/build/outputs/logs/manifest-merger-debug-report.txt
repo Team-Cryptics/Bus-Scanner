@@ -1505,7 +1505,7 @@ ADDED from C:\Users\SUPERUSER\AndroidStudioProjects\new barcode-reader\app\src\m
 activity#com.google.android.gms.samples.vision.barcodereader.MainActivity
 ADDED from C:\Users\SUPERUSER\AndroidStudioProjects\new barcode-reader\app\src\main\AndroidManifest.xml:25:9-33:20
 	android:label
-		ADDED from C:\Users\SUPERUSER\AndroidStudioProjects\new barcode-reader\app\src\main\AndroidManifest.xml:27:13-56
+		ADDED from C:\Users\SUPERUSER\AndroidStudioProjects\new barcode-reader\app\src\main\AndroidManifest.xml:27:13-40
 	android:name
 		ADDED from C:\Users\SUPERUSER\AndroidStudioProjects\new barcode-reader\app\src\main\AndroidManifest.xml:26:13-41
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
